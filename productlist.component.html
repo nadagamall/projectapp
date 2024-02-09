@@ -1,0 +1,22 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Image</th>
+            <th>quantity</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <ng-container *ngForOf="let prd of prdlist">
+            <tr>
+            <td>{{prd.id}}</td>
+            <td>{{prd.name}}</td>
+            <td><img [src]="prd.imgUrl"></td>
+            <td>{{prd.quantity}}</td>
+            <td>{{prd.price}}</td>
+        </tr>
+        </ng-container>
+    </tbody>
+</table>
